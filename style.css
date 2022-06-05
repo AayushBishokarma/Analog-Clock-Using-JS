@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*,
+*::after,
+*::before {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+
+    background: linear-gradient(to right, rgb(80, 157, 80), rgb(66, 118, 164));
+}
+
+.para1 {
+    position: absolute;
+    top: 10%;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.para2 {
+    position: absolute;
+    bottom: 10%;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+
+.clock {
+ 
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    height: 360px;
+    width: 360px;
+   background: linear-gradient(to right,white,aqua);
+    border-radius: 50%;
+    border: 4px dashed black ;
+    position: relative;
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+
+}
+
+.clock .number1 {
+    --rotation: 30deg;
+}
+
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    z-index: 4;
+    border: 1px solid white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: black;
+    transform-origin: bottom;
+   
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 12;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+    
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 42%;
+    background-color: rgb(10, 8, 8);
+    
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 32%;
+    background-color: rgb(15, 11, 11);
+   
+}
